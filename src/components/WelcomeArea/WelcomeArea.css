@@ -1,0 +1,33 @@
+.welcome-area {
+    background-image: url("../../assets/bannerbackground.png");
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.welcome-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.welcome-text input {
+    border: 1px solid #f10434;
+    padding: 10px 50px;
+}
+
+.welcome-text input[type=search] {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.welcome-text input[type=submit] {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #f10434;
+    color: #fff;
+}
+
+.welcome-search {
+    margin-top: 50px;
+}

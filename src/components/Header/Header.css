@@ -1,0 +1,25 @@
+.header-right a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+.header-right .boxed-btn {
+    background-color: #f10434;
+    color: #fff;
+    border-radius: 20px;
+    padding: 13px 50px;
+}
+
+.header-right {
+    padding: 10px 0;
+}
+
+.logo img {
+    max-width: 250px;
+}
+
+.header {
+    padding: 15px 0;
+}
