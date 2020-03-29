@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Products.css';
 import fakeData from '../../assets/fakeData/fakeData';
+import Product from '../Product/Product';
 
 const Products = () => {
-  const { image, title, brief, price } = fakeData[0];
-
+  let product6 = fakeData.slice(0, 6);
+  const product = useState(product6);
   return (
     <div className='container section-padding'>
       <div className='row text-center'>
@@ -18,66 +19,11 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className='row text-center'>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
-        </div>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
-        </div>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
-        </div>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
-        </div>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
-        </div>
-        <div className='col-md-4'>
-          <div className='card'>
-            <img className='card-img-top' src={image} alt='' />
-            <div className='card-body'>
-              <h5 className='card-title'>{title}</h5>
-              <p className='card-text'>{brief}</p>
-              <p className='card-text'>$ {price}</p>
-            </div>
-          </div>
+      <div className='product-area'>
+        <div className='row'>
+          {product[0].map(pd => (
+            <Product key={pd.id} product={pd}></Product>
+          ))}
         </div>
       </div>
     </div>

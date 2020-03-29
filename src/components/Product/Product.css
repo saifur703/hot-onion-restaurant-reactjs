@@ -1,0 +1,16 @@
+.card-price {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-title a {
+    color: #333;
+}
+
+.card img {
+    padding: 15px 30px;
+}
