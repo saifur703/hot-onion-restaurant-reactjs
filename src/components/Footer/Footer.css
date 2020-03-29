@@ -1,0 +1,44 @@
+.footer-area {
+    background-color: #ddd;
+    padding: 40px 0;
+}
+
+.footer-area .logo img {
+    max-width: 200px;
+}
+
+.footer-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-area li a {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.footer-bottom-right {
+    text-align: right;
+}
+
+.single-footer h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer-bottom-right li {
+    display: inline-block;
+}
+
+.footer-bottom-right li a {
+    display: block;
+    padding: 0px 30px;
+    margin-bottom: 0;
+}
+
+.footer-area li a:hover {
+    color: #000;
+}

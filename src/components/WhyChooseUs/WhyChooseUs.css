@@ -1,0 +1,28 @@
+.section-title {
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.single-card-text {
+    padding: 30px;
+}
+
+.single-card {
+    box-shadow: 0 0 10px #ddd;
+}
+
+.single-card-text {
+    position: relative;
+    padding-left: 80px;
+}
+
+.single-card-text img {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}

@@ -1,0 +1,26 @@
+.card {
+    margin: 15px 0;
+}
+
+.product-filter {
+    margin-bottom: 50px;
+}
+
+.product-filter ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.product-filter li {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 30px;
+}
+
+.product-filter .active {
+    color: orangered;
+    border-bottom: 1px solid orangered;
+}
