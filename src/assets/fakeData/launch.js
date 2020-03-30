@@ -8,7 +8,7 @@ import launch6 from '../lunch/lunch6.png';
 
 const launch = [
   {
-    id: 1,
+    id: 7,
     cat: 'Launch',
     price: 45,
     image: launch1,
@@ -19,7 +19,7 @@ const launch = [
   },
 
   {
-    id: 2,
+    id: 8,
     cat: 'Launch',
     price: 45,
     image: launch2,
@@ -29,7 +29,7 @@ const launch = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 3,
+    id: 9,
     cat: 'Launch',
     price: 45,
     image: launch3,
@@ -39,7 +39,7 @@ const launch = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 4,
+    id: 10,
     cat: 'Launch',
     price: 45,
     image: launch4,
@@ -49,7 +49,7 @@ const launch = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 5,
+    id: 11,
     cat: 'Launch',
     price: 45,
     image: launch5,
@@ -59,7 +59,7 @@ const launch = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 6,
+    id: 12,
     cat: 'Launch',
     price: 45,
     image: launch6,

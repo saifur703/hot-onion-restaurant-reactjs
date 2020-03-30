@@ -8,7 +8,7 @@ import dinner6 from '../Dinner/dinner6.png';
 
 const dinner = [
   {
-    id: 1,
+    id: 13,
     cat: 'Dinner',
     price: 45,
     image: dinner1,
@@ -18,7 +18,7 @@ const dinner = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 2,
+    id: 14,
     cat: 'Dinner',
     price: 45,
     image: dinner2,
@@ -28,7 +28,7 @@ const dinner = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 3,
+    id: 15,
     cat: 'Dinner',
     price: 45,
     image: dinner3,
@@ -38,7 +38,7 @@ const dinner = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 4,
+    id: 16,
     cat: 'Dinner',
     price: 45,
     image: dinner4,
@@ -48,7 +48,7 @@ const dinner = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 5,
+    id: 17,
     cat: 'Dinner',
     price: 45,
     image: dinner5,
@@ -58,7 +58,7 @@ const dinner = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas totam voluptatum optio? Placeat asperiores maiores et quod? Eum cupiditate aliquam consectetur repudiandae facere! Reiciendis, quia? Ex incidunt unde earum.'
   },
   {
-    id: 6,
+    id: 18,
     cat: 'Dinner',
     price: 45,
     image: dinner6,

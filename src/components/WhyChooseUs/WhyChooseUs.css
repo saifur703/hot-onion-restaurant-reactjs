@@ -14,6 +14,11 @@
 
 .single-card {
     box-shadow: 0 0 10px #ddd;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .single-card-text {
