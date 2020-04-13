@@ -1,69 +1,118 @@
-import { useState } from 'react';
+// Firebase App (the core Firebase SDK) is always required and must be listed first
 import * as firebase from 'firebase/app';
-import firebaseConfig from '../../firebase.config';
+// Add the Firebase products that you want to use
 import 'firebase/auth';
+import firebaseConfig from '../../firebase.config';
+import React from 'react';
+import { useState, createContext } from 'react';
+import { useContext } from 'react';
+import { useEffect } from 'react';
 
-// Firebase Initialize
 firebase.initializeApp(firebaseConfig);
 
-// Authentication
-const useAuth = () => {
-  // State
-  const [user, setUser] = useState(null);
+const AuthContext = createContext();
 
-  // Sign In With Google
-  const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    return firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then(res => {
-        const { displayName, email } = res.user;
-        const signedInUser = { name: displayName, email };
-        setUser(signedInUser);
-        return res.user;
-      })
-      .catch(err => {
-        console.log(err);
-        setUser(null);
-        return err.message;
+export const useAuth = () => useContext(AuthContext);
+
+export const AuthContextProvider = (props) => {
+  const auth = Auth();
+  return (
+    <AuthContext.Provider value={auth}>{props.children}</AuthContext.Provider>
+  );
+};
+
+const getUser = (user) => {
+  const { displayName, photoURL, email } = user;
+  return { name: displayName, photo: photoURL, email };
+};
+
+const Auth = () => {
+  const [user, setUser] = useState(null);
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  const createUser = async (name, email, password) => {
+    try {
+      await firebase.auth().createUserWithEmailAndPassword(email, password);
+      await firebase.auth().currentUser.updateProfile({
+        displayName: name,
       });
+      const curUser = firebase.auth().currentUser;
+      setUser({
+        name: curUser.displayName,
+        email: curUser.email,
+      });
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
-  // sign in with email password
-  const signInWithEmailPass = () => {
+  const signInUser = (email, password) => {
     firebase
       .auth()
-      .signInWithEmailAndPassword()
-      .then(res => {
-        console.log(res);
+      .signInWithEmailAndPassword(email, password)
+      .then((res) => {
+        setUser({
+          name: res.user.displayName,
+          email: res.user.email,
+        });
       })
-      .catch(err => {
-        console.log(err);
-        console.log(err.message);
+      .catch((err) => {
+        alert(err.message);
       });
   };
 
-  // Sign Out
+  const signInWithGoogle = () => {
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        // The signed-in user info.
+        const signedInUser = getUser(result.user);
+        console.log(signedInUser);
+        setUser(signedInUser);
+      })
+      .catch((error) => {
+        setUser(null);
+        console.log(error.message);
+
+        return error.message;
+      });
+  };
   const signOut = () => {
     firebase
       .auth()
       .signOut()
-      .then(res => {
-        console.log(res);
+      .then(function () {
         setUser(null);
+        return 'Sign-out successful.';
       })
-      .catch(err => {
-        console.log(err);
+      .catch(function (error) {
+        // An error happened.
       });
   };
 
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function (usr) {
+      if (usr) {
+        const currentUser = getUser(usr);
+        console.log(currentUser);
+        setUser(currentUser);
+        // User is signed in.
+      } else {
+        // No user is signed in.
+      }
+    });
+  }, []);
+
+  const handleInnerClick = (event) => event.target.innerText;
+
   return {
     user,
-    signInWithEmailPass,
+    signInUser,
+    createUser,
     signInWithGoogle,
-    signOut
+    signOut,
+    handleInnerClick,
   };
 };
-
-export default useAuth;
+export default Auth;
